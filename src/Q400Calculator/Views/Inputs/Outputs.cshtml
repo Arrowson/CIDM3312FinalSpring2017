@@ -1,75 +1,135 @@
 ﻿@model Q400Calculator.Models.Inputs
 @{
     ViewData["Title"] = "Outputs";
-
-   
-    //where all of the logic will go
 }
-<dl class="dl-horizontal">
-    <dt>
-        @Html.DisplayNameFor(model => model.Altitude)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.Altitude)
-    </dd>
-    <dt>
-        @Html.DisplayNameFor(model => model.Icing)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.Icing)
-    </dd>
-    <dt>
-        @Html.DisplayNameFor(model => model.Name)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.Name)
-    </dd>
-    <dt>
-        @Html.DisplayNameFor(model => model.Precipitation)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.Precipitation)
-    </dd>
-    <dt>
-        @Html.DisplayNameFor(model => model.RunwayDirection)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.RunwayDirection)
-    </dd>
-    <dt>
-        @Html.DisplayNameFor(model => model.TakeoffTrueFalse)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.TakeoffTrueFalse)
-    </dd>
-    <dt>
-        @Html.DisplayNameFor(model => model.Temperature)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.Temperature)
-    </dd>
-    <dt>
-        @Html.DisplayNameFor(model => model.TripDistance)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.TripDistance)
-    </dd>
-    <dt>
-        @Html.DisplayNameFor(model => model.Weight)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.Weight)
-    </dd>
-    <dt>
-        @Html.DisplayNameFor(model => model.WindDegrees)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.WindDegrees)
-    </dd>
-    <dt>
-        @Html.DisplayNameFor(model => model.WindSpeed)
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.WindSpeed)
-    </dd>
-</dl>
+<h1>Your Inputs</h1>
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Altitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Icing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precipitation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RunwayDirection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Temperature)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TripDistance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindDegrees)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindSpeed)
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Altitude)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Icing)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Precipitation)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.RunwayDirection)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Temperature)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TripDistance)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.WindDegrees)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.WindSpeed)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Outputs</h1>
+<table>
+    <thead>
+        <tr>
+            <th>
+                VR - rotation speed: the speed where the pilots lifts the aircraft into the sky
+            </th>
+            <th>
+                V1 - the speed at which a takeoff can't be aborted
+            </th>
+            <th>
+                V2 - the speed at which the airplane can continue to fly even it an engine is lost
+            </th>
+            <th>
+                V FRI - Flap reduction initiation speed: the speed at which flaps are retracted after takeoff.
+            </th>
+            <th>
+                V CLMB - the seep at which the flaps are retracted and the aircraft climbs cleanly
+            </th>
+            <th>
+                V app - normal final approach speed for a given weight and flap setting
+            </th>
+            <th>
+                V ref - a minimum speed with a safe margin above stall speed
+            </th>
+            <th>
+                V ga - go around speed: speed at which the aircraft can safely begin to climb during a go around.
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Vr)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.V1)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.V2)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.VFri)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.VClimb)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Vapp)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Vref)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Vga)
+            </td>
+        </tr>
+    </tbody>
+</table>

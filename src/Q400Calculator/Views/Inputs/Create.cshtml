@@ -2,6 +2,23 @@
 
 @{
     ViewData["Title"] = "Create";
+    List<LandingFlaps10> fd10 = Model.LandingFlaps10;
+    List<LandingFlaps15> fd15 = Model.LandingFlaps15;
+    List<LandingFlaps35> fd35 = Model.LandingFlaps35;
+    List<LandingFlaps5> fd5 = Model.LandingFlaps5;
+
+    List<TakeoffFlaps10Above20> tf10a20 = Model.TakeoffFlaps10Above20;
+    List<TakeoffFlaps10Below20Data> tf10b20 = Model.TakeoffFlaps10Below20;
+    List<TakeoffFlaps15Above20> tf15a20 = Model.TakeoffFlaps15Above20;
+    List<TakeoffFlaps15Below20Data> tf15b20 = Model.TakeoffFlaps15Below20;
+    List<TakeoffFlaps5Above20Data> tf5a20 = Model.TakeoffFlaps5Above20;
+    List<TakeoffFlaps5Above5Below20Data> tf5b20 = Model.TakeoffFlaps5Below20;
+
+    List<ClimbData> cd = Model.ClimbData;
+
+    Random rand = new Random();
+    Model.WindDegrees = rand.Next(1, 360);
+    Model.RunwayDirection = rand.Next(1, 360);
 }
 
 <h2>Create</h2>
@@ -54,11 +71,12 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <div class="checkbox">
-                    <div><span asp-validation-for="TakeoffTrueFalse" class="text-danger"></span></div>
-                    <input asp-for="TakeoffTrueFalse" />
-                    <label asp-for="TakeoffTrueFalse"></label>
-                </div>
+                <select asp-for=@Model.FlapsSettings>
+                    <option value =5>Flaps 5 Degrees</option>
+                    <option value =10>Flaps 10 Degrees</option>
+                    <option value =15>Flaps 15 Degrees</option>
+                    <option value=35>Flaps 35 Degrees</option>
+                </select>
             </div>
         </div>
         <div class="form-group">

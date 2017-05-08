@@ -8,11 +8,31 @@ namespace Q400Calculator.Models
 {
     public class Inputs
     {
+        public List<FlapData> FlapData { get; set; }
+        public List<ClimbData> ClimbData { get; set; }
+        public List<LandingFlaps10> LandingFlaps10 { get; set; }
+        public List<LandingFlaps15> LandingFlaps15 { get; set; }
+        public List<LandingFlaps35> LandingFlaps35 { get; set; }
+        public List<LandingFlaps5> LandingFlaps5 { get; set; }
+        public List<TakeoffFlaps10Above20> TakeoffFlaps10Above20 { get; set; }
+        public List<TakeoffFlaps10Below20Data> TakeoffFlaps10Below20 { get; set; }
+        public List<TakeoffFlaps15Above20> TakeoffFlaps15Above20 { get; set; }
+        public List<TakeoffFlaps15Below20Data> TakeoffFlaps15Below20 { get; set; }
+        public List<TakeoffFlaps5Above20Data> TakeoffFlaps5Above20 { get; set; }
+        public List<TakeoffFlaps5Above5Below20Data> TakeoffFlaps5Below20 { get; set; }
+        
+
+        [Required(ErrorMessage = "You must include Flap Settings")]
+        public int FlapsSettings { get; set; }
+
         public int ID { get; set; }
         [Required(ErrorMessage = "Please enter the Aircraft Weight")]
         [Range(18000, 29000, ErrorMessage ="Weight must be between 18000 Kg to 29000 Kg")]
         [Display(Name = "Aircraft Weight")]
         public int Weight { get; set; }
+
+        public int LandingWeight { get; set; }
+        public int SelectedWeight { get; set; }
 
         [Required(ErrorMessage = "Please enter the Runway Altitude")]
         [Range(0, 10000, ErrorMessage = "Runway Altitude must be between 0 M to 10000 M")]
@@ -56,5 +76,18 @@ namespace Q400Calculator.Models
         [Required(ErrorMessage = "Please enter your name")]
         [Display(Name = "Pilot's Name")]
         public string Name { get; set; }
+
+        public int VClimb { get; set; }
+        public int VFri { get; set; }
+        public int Vr { get; set; }
+        public int V2 { get; set; }
+        public int V1 { get; set; }
+        public int Vapp { get; set; }
+        public int Vref { get; set; }
+        public int Vga { get; set; }
+
+        public bool IsTailwind { get; set; }
+
+        public double WindComponent { get; set; }
     }
 }

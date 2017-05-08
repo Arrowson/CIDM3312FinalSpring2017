@@ -8,9 +8,10 @@ using Q400Calculator.Data;
 namespace Q400Calculator.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170508202604_AddedLandingWeight")]
+    partial class AddedLandingWeight
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -196,70 +197,6 @@ namespace Q400Calculator.Data.Migrations
                     b.ToTable("ClimbData");
                 });
 
-            modelBuilder.Entity("Q400Calculator.Models.FlapData", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("Cold0V2");
-
-                    b.Property<int>("Cold0Vr");
-
-                    b.Property<int>("Cold10000V2");
-
-                    b.Property<int>("Cold10000Vr");
-
-                    b.Property<int>("Cold2000V2");
-
-                    b.Property<int>("Cold2000Vr");
-
-                    b.Property<int>("Cold4000V2");
-
-                    b.Property<int>("Cold4000Vr");
-
-                    b.Property<int>("Cold6000V2");
-
-                    b.Property<int>("Cold6000Vr");
-
-                    b.Property<int>("Cold8000V2");
-
-                    b.Property<int>("Cold8000Vr");
-
-                    b.Property<int>("Hot0V2");
-
-                    b.Property<int>("Hot0Vr");
-
-                    b.Property<int>("Hot10000V2");
-
-                    b.Property<int>("Hot10000Vr");
-
-                    b.Property<int>("Hot2000V2");
-
-                    b.Property<int>("Hot2000Vr");
-
-                    b.Property<int>("Hot4000V2");
-
-                    b.Property<int>("Hot4000Vr");
-
-                    b.Property<int>("Hot6000V2");
-
-                    b.Property<int>("Hot6000Vr");
-
-                    b.Property<int>("Hot8000V2");
-
-                    b.Property<int>("Hot8000Vr");
-
-                    b.Property<int?>("InputsID");
-
-                    b.Property<int>("Weight");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("InputsID");
-
-                    b.ToTable("FlapData");
-                });
-
             modelBuilder.Entity("Q400Calculator.Models.Inputs", b =>
                 {
                     b.Property<int>("ID")
@@ -271,8 +208,6 @@ namespace Q400Calculator.Data.Migrations
 
                     b.Property<bool>("Icing");
 
-                    b.Property<bool>("IsTailwind");
-
                     b.Property<int>("LandingWeight");
 
                     b.Property<string>("Name")
@@ -282,33 +217,13 @@ namespace Q400Calculator.Data.Migrations
 
                     b.Property<int>("RunwayDirection");
 
-                    b.Property<int>("SelectedWeight");
-
                     b.Property<bool>("TakeoffTrueFalse");
 
                     b.Property<int>("Temperature");
 
                     b.Property<int>("TripDistance");
 
-                    b.Property<int>("V1");
-
-                    b.Property<int>("V2");
-
-                    b.Property<int>("VClimb");
-
-                    b.Property<int>("VFri");
-
-                    b.Property<int>("Vapp");
-
-                    b.Property<int>("Vga");
-
-                    b.Property<int>("Vr");
-
-                    b.Property<int>("Vref");
-
                     b.Property<int>("Weight");
-
-                    b.Property<double>("WindComponent");
 
                     b.Property<int>("WindDegrees");
 
@@ -688,13 +603,6 @@ namespace Q400Calculator.Data.Migrations
                 {
                     b.HasOne("Q400Calculator.Models.Inputs")
                         .WithMany("ClimbData")
-                        .HasForeignKey("InputsID");
-                });
-
-            modelBuilder.Entity("Q400Calculator.Models.FlapData", b =>
-                {
-                    b.HasOne("Q400Calculator.Models.Inputs")
-                        .WithMany("FlapData")
                         .HasForeignKey("InputsID");
                 });
 
