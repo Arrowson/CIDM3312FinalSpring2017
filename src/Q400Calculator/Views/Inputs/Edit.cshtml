@@ -1,0 +1,106 @@
+@model Q400Calculator.Models.Inputs
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>Inputs</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ID" />
+        <div class="form-group">
+            <label asp-for="Altitude" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Altitude" class="form-control" />
+                <span asp-validation-for="Altitude" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="Icing" />
+                    <label asp-for="Icing"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="Precipitation" />
+                    <label asp-for="Precipitation"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="RunwayDirection" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="RunwayDirection" class="form-control" />
+                <span asp-validation-for="RunwayDirection" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="TakeoffTrueFalse" />
+                    <label asp-for="TakeoffTrueFalse"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Temperature" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Temperature" class="form-control" />
+                <span asp-validation-for="Temperature" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TripDistance" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TripDistance" class="form-control" />
+                <span asp-validation-for="TripDistance" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Weight" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="WindDegrees" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="WindDegrees" class="form-control" />
+                <span asp-validation-for="WindDegrees" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="WindSpeed" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="WindSpeed" class="form-control" />
+                <span asp-validation-for="WindSpeed" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

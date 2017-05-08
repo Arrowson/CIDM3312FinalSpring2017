@@ -1,0 +1,97 @@
+@model IEnumerable<Q400Calculator.Models.Inputs>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Altitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Icing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precipitation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RunwayDirection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TakeoffTrueFalse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Temperature)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TripDistance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindDegrees)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindSpeed)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Altitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Icing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precipitation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RunwayDirection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TakeoffTrueFalse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Temperature)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TripDistance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WindDegrees)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WindSpeed)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-action="Outputs" asp-route-id="@item.ID">Outputs</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

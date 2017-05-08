@@ -1,0 +1,115 @@
+@model Q400Calculator.Models.Inputs
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Inputs</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Altitude" class="col-md-2 control-label"></label>
+            <div><span asp-validation-for="Altitude" class="text-danger"></span></div>
+            <div class="col-md-10">
+                <input asp-for="Altitude" class="form-control" />
+                <span asp-validation-for="Altitude" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div><span asp-validation-for="Icing" class="text-danger"></span></div>
+                <div class="checkbox">
+                    <input asp-for="Icing" />
+                    <label asp-for="Icing"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <div><span asp-validation-for="Name" class="text-danger"></span></div>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div><span asp-validation-for="Precipitation" class="text-danger"></span></div>
+                <div class="checkbox">
+                    <input asp-for="Precipitation" />
+                    <label asp-for="Precipitation"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="RunwayDirection" class="col-md-2 control-label"></label>
+            <div><span asp-validation-for="RunwayDirection" class="text-danger"></span></div>
+            <div class="col-md-10">
+                <input asp-for="RunwayDirection" class="form-control" />
+                <span asp-validation-for="RunwayDirection" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <div><span asp-validation-for="TakeoffTrueFalse" class="text-danger"></span></div>
+                    <input asp-for="TakeoffTrueFalse" />
+                    <label asp-for="TakeoffTrueFalse"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Temperature" class="col-md-2 control-label"></label>
+            <div><span asp-validation-for="Temperature" class="text-danger"></span></div>
+            <div class="col-md-10">
+                <input asp-for="Temperature" class="form-control" />
+                <span asp-validation-for="Temperature" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TripDistance" class="col-md-2 control-label"></label>
+            <div><span asp-validation-for="TripDistance" class="text-danger"></span></div>
+            <div class="col-md-10">
+                <input asp-for="TripDistance" class="form-control" />
+                <span asp-validation-for="TripDistance" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Weight" class="col-md-2 control-label"></label>
+            <div><span asp-validation-for="Weight" class="text-danger"></span></div> 
+            <div class="col-md-10">
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="WindDegrees" class="col-md-2 control-label"></label>
+            <div><span asp-validation-for="WindDegrees" class="text-danger"></span></div>
+            <div class="col-md-10">
+                <input asp-for="WindDegrees" class="form-control" />
+                <span asp-validation-for="WindDegrees" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="WindSpeed" class="col-md-2 control-label"></label>
+            <div><span asp-validation-for="WindSpeed" class="text-danger"></span></div>
+            <div class="col-md-10">
+                <input asp-for="WindSpeed" class="form-control" />
+                <span asp-validation-for="WindSpeed" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
