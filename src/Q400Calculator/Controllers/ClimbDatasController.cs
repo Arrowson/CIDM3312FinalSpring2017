@@ -18,6 +18,10 @@ namespace Q400Calculator.Controllers
         {
             return x + y;
         }
+        private int Subtract(int x, int y)
+        {
+            return x - y;
+        }
 
         public ClimbDatasController(ApplicationDbContext context)
         {
